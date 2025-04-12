@@ -1,0 +1,21 @@
+.light {
+  --secondaryColor: rgb(145, 144, 142);
+  --primaryColor: orange;
+  --bgColor: rgba(255, 255, 255, 0.767);
+  --fgColor: black;
+  --fadedColor: rgb(192, 192, 192);
+}
+.dark {
+  --primaryColor: rgb(184, 121, 6);
+  --secondaryColor: rgb(37, 37, 37);
+  --bgColor: #1d1d1f;
+  --fgColor: rgb(233, 233, 233);
+  --fadedColor: rgb(73, 73, 73);
+}
+
+body {
+  background: var(--bgColor);
+  color: var(--fgColor);
+  transition: color 2s;
+  transition: background 2s;
+}
