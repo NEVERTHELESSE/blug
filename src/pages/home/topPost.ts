@@ -1,0 +1,38 @@
+export const topPost = [
+  {
+    id: "1",
+    title: "Why react is the best library",
+    ago: "11/4/2057",
+    imageUrl: "img6.jpg",
+    like: 4,
+    comment: 5,
+    share: 18,
+  },
+  {
+    id: "2",
+    title: "Top 10 Programming language",
+    ago: "4/13/2032",
+    imageUrl: "img7.jpg",
+    like: 12,
+    comment: 18,
+    share: 9,
+  },
+  {
+    id: "3",
+    title: "Vue or Angular",
+    ago: "4/17/2125",
+    imageUrl: "img8.jpg",
+    like: 16,
+    comment: 13,
+    share: 5,
+  },
+  {
+    id: "4",
+    title: "All about Software Developer",
+    ago: "12/16/2029",
+    imageUrl: "img9.jpg",
+    like: 20,
+    comment: 11,
+    share: 15,
+  },
+];

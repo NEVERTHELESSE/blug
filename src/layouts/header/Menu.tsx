@@ -20,7 +20,7 @@ export default function Menu() {
       <div
         className=" slm:w-[14rem] sm:w-[20rem]  h-screen bg-fadedColor  shadow absolute  top-0 p-8 flex flex-col duration-700"
         style={{
-          right: show ? "0" : "-30rem",
+          right: show ? "0" : "30rem",
         }}
       >
         <FaX
@@ -34,7 +34,7 @@ export default function Menu() {
           <Link
             key={navigate.title}
             to={navigate.link}
-            className="text-2xl capitalize border-b p-2"
+            className="text-2xl capitalize border-b p-2 hover:bg-primaryColor duration-500"
           >
             {navigate.title}
           </Link>

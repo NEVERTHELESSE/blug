@@ -19,14 +19,16 @@ export default function HomeDescription() {
   return (
     <main className="my-12 flex justify-between">
       <div className=" w-[70%]">
-        <h1 className="text-3xl md:text-5xl font-extrabold">
-          <TypeAnimation
-            sequence={descriptions}
-            wrapper="span"
-            speed={10}
-            repeat={Infinity}
-          />
-        </h1>
+        <div className="h-[8rem] sm:h-[7rem]">
+          <h1 className="text-3xl md:text-5xl font-extrabold">
+            <TypeAnimation
+              sequence={descriptions}
+              wrapper="span"
+              speed={10}
+              repeat={Infinity}
+            />
+          </h1>
+        </div>
         <p className="my-4 md:text-2xl font-extrabold text-fadedColor">
           Learn from entrepreneurs and industry leaders about business
           strategies, funding, and innovation

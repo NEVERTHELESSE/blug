@@ -32,17 +32,17 @@ export default function AddComment({ postId, comment, setComment }) {
       onSubmit={addToComment}
       className="my-4 bg-secondaryColor p-2 rounded-2xl flex items-center relative"
     >
-      <div className="size-[4rem] rounded-full overflow-hidden ">
-        <Image path={author.profilePics} />
+      <div className="size-[3rem] sm:size-[4rem] rounded-full overflow-hidden ">
+        <Image path={"profile.png"} />
       </div>
       <input
         type="text"
         placeholder={`${author.username} type your comment...`}
-        className="rounded-2xl  text-2xl py-3 px-8 mx-3 bg-fadedColor w-full"
+        className="rounded-2xl  text-2xl py-3 px-8 ms:mx-3 bg-fadedColor w-full"
         onChange={(e) => setComment(e.target.value)}
       />
       <button
-        className=" right-[2rem] bg-primaryColor py-5 px-7 rounded-2xl cursor-pointer"
+        className="  bg-primaryColor p-2 sm:py-5 sm:px-7 rounded-2xl cursor-pointer"
         type="submit"
       >
         <FiSend />

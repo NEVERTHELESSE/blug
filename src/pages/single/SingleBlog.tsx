@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useState } from "react";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import Image from "../../components/Image";
 import { Helmet } from "react-helmet";
 import HomeAuthor from "../home/HomeAuthor";
@@ -6,24 +6,33 @@ import HomePostOption from "../home/HomePostOption";
 import { FiBookmark, FiSave, FiTrash2 } from "react-icons/fi";
 import PostReaction from "../home/PostReaction";
 import AddComment from "./AddComment";
-import axios from "axios";
-import useSWR from "swr";
+import { datas } from "../../layouts/data";
+import { useLocation } from "react-router-dom";
 const UserComment = lazy(() => import("./UserComment"));
 
 export default function SingleBlog() {
-  const id = window.location.search.split("?")[1];
-  const api = import.meta.env.VITE_API;
-  const fetcher = (url) => axios.get(url).then((res) => res.data);
-  const { data, isLoading, error } = useSWR(`${api}post/postid/${id}`, fetcher);
+  const id = useLocation().search.split("?")[1];
+
+  const data = datas.find((r) => r._id == id);
+  // const data = topPost.find((r) => r.id == id);
+  console.log(id);
+  console.log(data);
   const [comment, setComment] = useState("");
+
+  useEffect(() => {
+    window.scroll({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <>
       {data ? (
         <section>
           <Helmet title={`${data.title}`} />
-          <div className="my-12 flex justify-between">
-            <div className="w-[50%]">
-              <h2 className="text-6xl font-extrabold">{data.title}</h2>
+          <div className="my-12 sm:flex justify-between">
+            <div className="sm:w-[50%]">
+              <h2 className="text-2xl sm:text-6xl font-extrabold">
+                {data.title}
+              </h2>
               <HomeAuthor author={data.author} />
               <HomePostOption />
               <div className=" flex justify-between">
@@ -34,17 +43,23 @@ export default function SingleBlog() {
                   <FiTrash2 /> <span>Delete post</span>
                 </div>
               </div>
+              <div
+                className="text-2xl text-justify"
+                dangerouslySetInnerHTML={{ __html: data.body }}
+              ></div>
             </div>
-            <div className="w-[40%] float-left">
-              <Image path={data.imageUrl} />
-            </div>
+            <img
+              src={`/images/${data.imageUrl}`}
+              alt=""
+              className="w-[40%] h-max  bg-primaryColor float-left sticky top-20"
+            />
           </div>
 
-          <div
-            className="text-2xl text-justify"
-            dangerouslySetInnerHTML={{ __html: data.body }}
-          ></div>
-          <PostReaction />
+          <PostReaction
+            like={data.likes.length}
+            comment={data.comments.length}
+            share={data.shares.length}
+          />
           <AddComment
             postId={data._id}
             comment={comment}

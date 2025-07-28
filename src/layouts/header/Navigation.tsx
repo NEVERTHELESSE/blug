@@ -13,7 +13,7 @@ export default function Navigation() {
           <Link
             to={navigate.link}
             key={index}
-            className={`smm:text-2xl capitalize p-1 smm:p-2 ${
+            className={`smm:text-2xl mx-3 sm:mx-6 capitalize p-1 smm:p-2 ${
               navigate.active == userLocation && "bg-primaryColor rounded-2xl"
             }`}
           >

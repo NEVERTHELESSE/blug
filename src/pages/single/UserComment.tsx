@@ -9,7 +9,7 @@ export default function UserComment({ comments }) {
         comments.map((comment) => (
           <div className="bg-secondaryColor my-3 rounded-2xl p-2 w-full flex">
             <div className="size-[4rem] overflow-hidden rounded-full bg-secondaryColor">
-              <Image path={comment.profilePics} />
+              <Image path={`profile.png`} />
             </div>
             <div className="ml-4">
               <p className="text-2xl ">{comment.username}</p>
