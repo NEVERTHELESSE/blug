@@ -21,7 +21,7 @@ export default function HomeSortPost() {
   const [selected, setSelected] = useState("");
 
   return (
-    <main className="w-full p-2 md:p-4 box rounded-full my-4 sticky top-10 filter z-30 overflow-x-auto  flex">
+    <main className="w-full p-2 md:p-4 box rounded-full my-4 sticky top-20 sm:top-10 filter  overflow-x-auto  flex">
       {options.map((option, index) => (
         <p
           key={index}

@@ -38,7 +38,7 @@ export default function HomeDescription() {
         to="/write"
         className="border rounded-full flex justify-center items-center  flex-col border-fgColor size-[5rem] md:size-[10rem]"
       >
-        <div className="size-[2rem] md:size-[4rem] animate-spin spin">
+        <div className="size-[2rem] md:size-[4rem] animate-spin spin -z-10">
           <img src="/logo.png" alt="" />
         </div>
         <p className="text-center">Create an article</p>

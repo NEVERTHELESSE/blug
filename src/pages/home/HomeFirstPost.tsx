@@ -83,7 +83,7 @@ export default function HomeFirstPost() {
           </h3>
           <HomePostOption />
         </Link>
-        <PostReaction />
+        <PostReaction like={39} comment={194} share={29} />
         <HomeAuthor author={data.author} />
         <div
           className="text-2xl text-justify"

@@ -13,7 +13,7 @@ export default function Menu() {
     <div
       className="flex md:hidden z-50"
       style={{
-        zIndex: 100,
+        zIndex: 1000,
       }}
     >
       <FiAlignJustify size={30} onClick={changeShow} />

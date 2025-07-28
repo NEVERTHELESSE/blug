@@ -51,7 +51,7 @@ export default function SingleBlog() {
             <img
               src={`/images/${data.imageUrl}`}
               alt=""
-              className="w-[40%] h-max  bg-primaryColor float-left sticky top-20"
+              className=" sm:w-[40%] h-[30rem] bg-primaryColor float-left sticky top-20"
             />
           </div>
 

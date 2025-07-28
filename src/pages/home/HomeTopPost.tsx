@@ -36,12 +36,6 @@ export default function HomeTopPost() {
               <PostReaction like={like} comment={comment} share={share} />
             </div>
           </main>
-          <Link
-            to={`/post${id}`}
-            className="text-center capitalize text-blue-500 underline "
-          >
-            More on trending
-          </Link>
         </section>
       ))}
     </section>
